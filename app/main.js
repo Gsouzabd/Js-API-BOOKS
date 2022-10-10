@@ -18,9 +18,12 @@ async function getSearchBooks(){
 
 function showBooks(booksList){
     livrosSection.innerHTML = '';
+    
     booksList.forEach(book => {
+        let stock = book.quantidade > 0 ? 'livro__imagens' : 'livro__imagens indisponivel';
+        
         livrosSection.innerHTML +=     `<div class="livro">
-        <img class="livro__imagens" src="${book.imagem}" alt="Capa do livro ${book.titulo}" />
+        <img class="${stock}" src="${book.imagem}" alt="${book.alt}" />
         <h2 class="livro__titulo">
           ${book.titulo}
         </h2>
