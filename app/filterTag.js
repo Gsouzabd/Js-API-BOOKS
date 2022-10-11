@@ -13,6 +13,6 @@ btnAvailableBooks.addEventListener('click', filterAvailableBooks);
 
 function filterAvailableBooks(){
     let availableBooks = books.filter(book => book.quantidade > 0);
-    console.log(availableBooks)
+    
     showBooks(availableBooks);
 }
